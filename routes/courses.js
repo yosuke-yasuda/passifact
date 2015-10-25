@@ -9,7 +9,7 @@ var should = require('should');
 var sampleCourseJson = {
     presidents : {
         title: "World Leaders",
-        image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
+        image: "/images/presidents.jpg",
         description: "Through this course, you can memorize names of presidents in the U.S.",
         data: [
             {
@@ -36,7 +36,7 @@ var sampleCourseJson = {
     },
     countries: {
         title:"Countries and Capitals",
-        image: "https://www.fbi.gov/about-us/investigate/vc_majorthefts/cac/image/international-map",
+        image: "/images/states.png",
         description: "Through this course, you learn about countries.",
         data: [
             {
@@ -65,7 +65,7 @@ var sampleCourseJson = {
     },
     chemicals: {
         title:"Chemical Compositions",
-        image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
+        image: "/images/chemistry.jpg",
         description: "Through this course, you will learn about chemicals.",
         data: [
             {
