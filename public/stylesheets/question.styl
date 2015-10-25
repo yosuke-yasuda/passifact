@@ -1,7 +1,7 @@
 default_font_size = 60px
 
 #question_box
-  margin 540px auto
+  margin 90px auto
   font-size default_font_size
   width 80%
   text-align center
@@ -16,7 +16,7 @@ default_font_size = 60px
 
 /* entire container, keeps perspective */
 #flip-container {
-  margin 300px auto
+  margin 200px auto
   perspective: 1000;
   color white
 }
@@ -58,13 +58,12 @@ default_font_size = 60px
 .front {
   z-index: 2;
   /* for firefox 31 */
-  background orangered
+  background yellow
   transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
-  background #cccc00
   transform: rotateY(180deg);
 }
 

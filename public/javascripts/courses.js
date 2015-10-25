@@ -38,6 +38,7 @@ $(document).ready(function() {
     var currentQuestion = 0;
     var lastQuestionIndex = sampleCourseJson[0].questions[0].length-1;
     showQuestionBox(currentQuestion);
+    $('#answer').focus();
     $('body').on('keydown', '#answer', function(event){
         if(event.keyCode == 13){
             console.log("aaa")

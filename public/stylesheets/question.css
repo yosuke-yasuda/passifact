@@ -1,5 +1,5 @@
 #question_box {
-  margin: 540px auto;
+  margin: 90px auto;
   font-size: 60px;
   width: 80%;
   text-align: center;
@@ -12,7 +12,7 @@
 }
 /* entire container, keeps perspective */
 #flip-container {
-  margin: 300px auto;
+  margin: 200px auto;
   perspective: 1000;
   color: #fff;
 }
@@ -52,12 +52,11 @@
 .front {
   z-index: 2;
 /* for firefox 31 */
-  background: #ff4500;
+  background: #ff0;
   transform: rotateY(0deg);
 }
 /* back, initially hidden pane */
 .back {
-  background: #cc0;
   transform: rotateY(180deg);
 }
 #c {
