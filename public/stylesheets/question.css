@@ -1,5 +1,5 @@
 #question_box {
-  margin: 320px auto;
+  margin: 540px auto;
   font-size: 60px;
   width: 80%;
   text-align: center;
@@ -9,6 +9,56 @@
   width: 100%;
   font-size: 80px;
   text-align: center;
+}
+/* entire container, keeps perspective */
+#flip-container {
+  margin: 300px auto;
+  perspective: 1000;
+  color: #fff;
+}
+/* flip the pane when hovered */
+#flip-container.animated .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+#flip-container,
+.front,
+.back {
+  display: table;
+  text-align: center;
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+}
+#flip-container span.glyphicon {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+/* for firefox 31 */
+  background: #ff4500;
+  transform: rotateY(0deg);
+}
+/* back, initially hidden pane */
+.back {
+  background: #cc0;
+  transform: rotateY(180deg);
 }
 #c {
   position: absolute;

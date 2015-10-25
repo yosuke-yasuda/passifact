@@ -38,7 +38,61 @@ var sampleCourseJson = {
             }
         ]
     },
-
+    countries: {
+        title:"",
+        image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
+        description: "Through this course, you can memorize names of presidents in the U.S.",
+        data: [
+            {
+                fact   : "The capital of ___ is Kabul",
+                answer : "Afghanistan",
+            },{
+                fact   : "The capital of ___ is Nassau",
+                answer : "Bahamas",
+            },{
+                fact   : "The capital of ___ is Santiago",
+                answer : "Chile",
+            },{
+                fact   : "The capital of ___ is Koror",
+                answer : "Pulau",
+            },{
+                fact   : "The capital of ___ is Asuncion",
+                answer : "Paraguay",
+            },{
+                fact   : "The capital of ___ is Hanoi",
+                answer : "Vietnam",
+            },{
+                fact   : "The capital of ___ is Harare",
+                answer : "Zimbabwe",
+            }
+        ]
+    },
+    chemicals: {
+        title:"",
+        image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
+        description: "Through this course, you can memorize names of presidents in the U.S.",
+        data: [
+            {
+                fact   : "Ibuprofen's chemical formula is ___",
+                answer : "C13H18O2",
+            },{
+                fact   : "Vanillin's chemical formula is ___",
+                answer : "C13H18O2",
+            },{
+                fact   : "Glucose's chemical formula is ___",
+                answer : "C6H12O6",
+            },{
+                fact   : "Sulfuric Acid's chemical formula is ___",
+                answer : "H2SO4",
+            },{
+                fact   : "Baking Soda's chemical formula is ___",
+                answer : "NaHCO3",
+            },{
+                fact   : "Benzene's chemical formula is ___",
+                answer : "C6H6",
+            },
+        ]
+    }
 };
 
 /* GET users listing. */

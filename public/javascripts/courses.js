@@ -36,7 +36,7 @@ var sampleCourseJson = [{
 // DOM Ready =============================================================
 $(document).ready(function() {
     var currentQuestion = 0;
-    var lastQuestionIndex = sampleCourseJson[0].questions.length-1;
+    var lastQuestionIndex = sampleCourseJson[0].questions[0].length-1;
     showQuestionBox(currentQuestion);
     $('body').on('keydown', '#answer', function(event){
         if(event.keyCode == 13){
@@ -56,8 +56,9 @@ $(document).ready(function() {
         }
     });
 
-    $('body').on('click', '#answer_button', function(){
-        if(isCorrectAnswer()){
+    $('body').on('click', '#flip-container', function(){
+        console.log("tap");
+        if(isCorrectAnswer(currentQuestion)){
             currentQuestion+=1;
             setTimeout(function(){
                 var inputTag = '<input id="answer" type="text" placeholder="placeholder"/>'
@@ -78,14 +79,22 @@ function isCorrectAnswer(questionIndex){
     var qa_box = $('#question_fact_box')
     if(inputVal == correctAnswer){
         qa_box.addClass('fadeOutUp').addClass('animated');
+        $('#flip-container').addClass('animated');
+        $('#flip-container .back').css({background: "green"});
+        $('#flip-container .back').html('<span class="glyphicon glyphicon-thumbs-up"/>')
         setTimeout(function(){
             qa_box.removeClass('fadeOutUp').removeClass('animated');
+            $('#flip-container').removeClass('animated');
         },1000);
         return true;
     }else{
         qa_box.addClass('jello').addClass('animated');
+        $('#flip-container').addClass('animated');
+        $('#flip-container .back').html('<span class="glyphicon glyphicon-remove"/>')
+        $('#flip-container .back').css({background: "red"});
         setTimeout(function(){
             qa_box.removeClass('jello').removeClass('animated');
+            $('#flip-container').removeClass('animated');
         },1000);
         return false;
     }

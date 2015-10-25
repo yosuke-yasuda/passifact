@@ -6,14 +6,10 @@ block head
    link(rel='stylesheet', href='/stylesheets/question.css')
 block content
    div#question_box
-      #c
-         .s
-         .s
-         .s
-         .s
-         .s
-         .s
-         .s
       div#question_fact_box
          span#fact #[input#answer(type="text" placeholder="placeholder")] is the president of the United States
-      button#answer_button.btn.btn-default.btn-success Answer
+      #flip-container <!--(ontouchstart="this.classList.toggle('hover')")-->
+         .flipper
+            .front
+               span.glyphicon.glyphicon-ok
+            .back
