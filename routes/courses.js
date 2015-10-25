@@ -9,7 +9,7 @@ var should = require('should');
 var sampleCourseJson = {
     presidents : {
         title: "World Leaders",
-        image: "/images/presidents.jpg",
+        image: "images/presidents.jpg",
         description: "Through this course, you can memorize names of presidents in the U.S.",
         data: [
             {
@@ -36,7 +36,7 @@ var sampleCourseJson = {
     },
     countries: {
         title:"Countries and Capitals",
-        image: "/images/states.png",
+        image: "images/states.png",
         description: "Through this course, you learn about countries.",
         data: [
             {
@@ -65,7 +65,7 @@ var sampleCourseJson = {
     },
     chemicals: {
         title:"Chemical Compositions",
-        image: "/images/chemistry.jpg",
+        image: "images/chemistry.jpg",
         description: "Through this course, you will learn about chemicals.",
         data: [
             {
