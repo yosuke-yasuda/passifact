@@ -8,7 +8,7 @@ var should = require('should');
 
 var sampleCourseJson = {
     presidents : {
-        title: "Names of Presidents",
+        title: "World Leaders",
         image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
         description: "Through this course, you can memorize names of presidents in the U.S.",
         data: [
@@ -64,7 +64,7 @@ var sampleCourseJson = {
         ]
     },
     chemicals: {
-        title:"Chemical Composition",
+        title:"Chemical Compositions",
         image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
         description: "Through this course, you will learn about chemicals.",
         data: [
