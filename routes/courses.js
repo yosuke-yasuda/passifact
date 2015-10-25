@@ -35,7 +35,7 @@ var sampleCourseJson = {
         ]
     },
     countries: {
-        title:"",
+        title:"Countries and Capitals",
         image: "https://www.fbi.gov/about-us/investigate/vc_majorthefts/cac/image/international-map",
         description: "Through this course, you learn about countries.",
         data: [
@@ -64,7 +64,7 @@ var sampleCourseJson = {
         ]
     },
     chemicals: {
-        title:"",
+        title:"Chemical Composition",
         image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
         description: "Through this course, you will learn about chemicals.",
         data: [
