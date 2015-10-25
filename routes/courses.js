@@ -88,32 +88,6 @@ var sampleCourseJson = {
                 answer : "C6H6",
             },
         ]
-    },
-    che: {
-        title:"Chemical Compositions",
-        image: "images/chemistry.jpg",
-        description: "Through this course, you will learn about chemicals.",
-        data: [
-            {
-                fact   : "Ibuprofen's chemical formula is ___",
-                answer : "C13H18O2",
-            },{
-                fact   : "Vanillin's chemical formula is ___",
-                answer : "C13H18O2",
-            },{
-                fact   : "Glucose's chemical formula is ___",
-                answer : "C6H12O6",
-            },{
-                fact   : "Sulfuric Acid's chemical formula is ___",
-                answer : "H2SO4",
-            },{
-                fact   : "Baking Soda's chemical formula is ___",
-                answer : "NaHCO3",
-            },{
-                fact   : "Benzene's chemical formula is ___",
-                answer : "C6H6",
-            },
-        ]
     }
 };
 
