@@ -5,3 +5,11 @@ body {
 a {
   color: #00b7ff;
 }
+div#title {
+  height: 500px;
+  color: #fff;
+  background-position: center bottom, left top;
+}
+div#list {
+  text-align: center;
+}
