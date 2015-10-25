@@ -6,7 +6,6 @@ var express = require('express');
 var router = express.Router();
 var should = require('should');
 
-var ids = [1,2,3,4];
 var sampleCourseJson = {
     presidents : [{
         title: "Name of Famous People",
@@ -73,6 +72,10 @@ router.get('/courseData/:category', function(req, res, next) {
 
 router.get('/web', function(req, res, next){
     res.render('courses', {course: sampleCourseJson[0]});
+});
+
+router.get('/web/questions', function(req, res, next){
+    res.render('questions',{});
 });
 
 module.exports = router;
