@@ -4,7 +4,7 @@
 
 var sampleCourseJson = [{
     _id: 1,
-    title: "Name of Famous People",
+    title: "Name of Presidents",
     questions: [
         {
             fact: "___ is the president of the United States",
@@ -36,21 +36,62 @@ var sampleCourseJson = [{
 // DOM Ready =============================================================
 $(document).ready(function() {
     var currentQuestion = 0;
+    var lastQuestionIndex = sampleCourseJson[0].questions.length-1;
     showQuestionBox(currentQuestion);
-    $('body').on('keypress', '#question_answer', function(event){
+    $('body').on('keydown', '#answer', function(event){
         if(event.keyCode == 13){
-            var inputVal = $(this).val();
-            var correctAnswer = $(this).attr('answer');
-            console.log(event);
-            if(inputVal == correctAnswer){
-                console.log("Correct");
-            }
+            console.log("aaa")
+            if(isCorrectAnswer(currentQuestion)){
+                currentQuestion+=1;
+                setTimeout(function(){
+                    var inputTag = '<input id="answer" type="text" placeholder="placeholder"/>'
+                    $('#fact').html(sampleCourseJson[0].questions[currentQuestion].fact.replace("___", inputTag));
+                    $('#question_fact_box').removeClass('fadeOutUp').removeClass('animated');
+                    $('#question_fact_box').addClass('fadeInUp').addClass('animated');
+                    setTimeout(function(){
+                        $('#question_fact_box').removeClass('fadeInUp').removeClass('animated');
+                    },500);
+                },500);
+            };
         }
     });
+
+    $('body').on('click', '#answer_button', function(){
+        if(isCorrectAnswer()){
+            currentQuestion+=1;
+            setTimeout(function(){
+                var inputTag = '<input id="answer" type="text" placeholder="placeholder"/>'
+                $('#fact').html(sampleCourseJson[0].questions[currentQuestion].fact.replace("___", inputTag));
+                $('#question_fact_box').removeClass('fadeOutUp').removeClass('animated');
+                $('#question_fact_box').addClass('fadeInUp').addClass('animated');
+                setTimeout(function(){
+                    $('#question_fact_box').removeClass('fadeInUp').removeClass('animated');
+                },500);
+            },500);
+        };
+    });
 });
+
+function isCorrectAnswer(questionIndex){
+    var correctAnswer = sampleCourseJson[0].questions[questionIndex].answer;
+    var inputVal = $('#answer').val();
+    var qa_box = $('#question_fact_box')
+    if(inputVal == correctAnswer){
+        qa_box.addClass('fadeOutUp').addClass('animated');
+        setTimeout(function(){
+            qa_box.removeClass('fadeOutUp').removeClass('animated');
+        },1000);
+        return true;
+    }else{
+        qa_box.addClass('jello').addClass('animated');
+        setTimeout(function(){
+            qa_box.removeClass('jello').removeClass('animated');
+        },1000);
+        return false;
+    }
+}
 
 function showQuestionBox(currentQuestionIndex){
     var currentQuestion = sampleCourseJson[0].questions[currentQuestionIndex];
     $('#question_fact').text(currentQuestion.fact);
-    $('#question_answer').attr('answer', currentQuestion.answer);
 }
