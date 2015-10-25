@@ -31,17 +31,13 @@ var sampleCourseJson = {
             {
                 fact: "___ is the President of China",
                 answer: "Xi Jinping",
-            },
-            {
-                fact: "___ is the Prime Minister of Sweden",
-                answer: "Stefan Löfven",
             }
         ]
     },
     countries: {
         title:"",
-        image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
-        description: "Through this course, you can memorize names of presidents in the U.S.",
+        image: "https://www.fbi.gov/about-us/investigate/vc_majorthefts/cac/image/international-map",
+        description: "Through this course, you learn about countries.",
         data: [
             {
                 fact   : "The capital of ___ is Kabul",
@@ -70,7 +66,7 @@ var sampleCourseJson = {
     chemicals: {
         title:"",
         image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
-        description: "Through this course, you can memorize names of presidents in the U.S.",
+        description: "Through this course, you will learn about chemicals.",
         data: [
             {
                 fact   : "Ibuprofen's chemical formula is ___",

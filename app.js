@@ -17,9 +17,6 @@ var webpage = require('./routes/webpage');
 var app = express();
 
 // Database
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost:27017/nodetest');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
