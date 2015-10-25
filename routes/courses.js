@@ -7,9 +7,10 @@ var router = express.Router();
 var should = require('should');
 
 var sampleCourseJson = {
-    presidents : [{
+    presidents : {
         title: "Name of Famous People",
-        questions: [
+        image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
+        data: [
             {
                 fact: "___ is the president of the United States",
                 answer: "Obama",
@@ -35,34 +36,28 @@ var sampleCourseJson = {
                 answer: "Stefan Löfven",
             },
         ]
-    }]
+    }
 };
 
 /* GET users listing. */
 router.get('/courseList', function(req, res, next) {
-    res.json(Object.keys(sampleCourseJson));
+    res.json(Object.keys(sampleCourseJson).map(function(objectKey){
+        var json = {};
+        json[objectKey] = sampleCourseJson[objectKey].title;
+        return json;
+    }));
 });
 
 router.post('/courseList', function(req, res, next) {
-    req.checkBody({
-        'key': {
-            notEmpty: true,
-            errorMessage: 'key must exist'
-        },
-        'contents': {
-            notEmpty: true,
-            isArray: true,
-            errorMessage: 'contents must be array' // Error message for the parameter
-        }
-    });
-
     var body = req.body;
 
-    for (var content in body.contents){
-        console.log(content);
-    }
+    sampleCourseJson[body.key] = {
+        "title": body.title,
+        "img": body.img,
+        "data": body.data
+    };
 
-    sampleCourseJson
+    res.send({msg: '' });
 });
 
 router.get('/courseData/:category', function(req, res, next) {
