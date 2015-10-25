@@ -8,8 +8,9 @@ var should = require('should');
 
 var sampleCourseJson = {
     presidents : {
-        title: "Name of Famous People",
+        title: "Names of Presidents",
         image: "http://www.therabreath.com/images/brafton/lg/famous-presidential-teeth-smiles.jpg",
+        description: "Through this course, you can memorize names of presidents in the U.S.",
         data: [
             {
                 fact: "___ is the president of the United States",
@@ -34,15 +35,21 @@ var sampleCourseJson = {
             {
                 fact: "___ is the Prime Minister of Sweden",
                 answer: "Stefan Löfven",
-            },
+            }
         ]
-    }
+    },
+
 };
 
 /* GET users listing. */
 router.get('/courseList', function(req, res, next) {
     res.json(Object.keys(sampleCourseJson).map(function(objectKey){
-        var json = {};
+        var json = {
+            key: objectKey,
+            title: sampleCourseJson[objectKey].title,
+            description: sampleCourseJson[objectKey].description,
+            image: sampleCourseJson[objectKey].image
+        };
         json[objectKey] = sampleCourseJson[objectKey].title;
         return json;
     }));
@@ -54,6 +61,7 @@ router.post('/courseList', function(req, res, next) {
     sampleCourseJson[body.key] = {
         "title": body.title,
         "img": body.img,
+        "description": body.description,
         "data": body.data
     };
 
